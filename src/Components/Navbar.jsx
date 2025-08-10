@@ -88,7 +88,7 @@ const Navbar = () => {
         {/* Logo and Brand */}
         <NavLink to="/" className="flex items-center gap-3 text-indigo-400 hover:text-indigo-500 transition">
           <GrCloudComputer size={36} />
-          <h1 className="text-2xl font-bold font-serif">UserEcho</h1>
+          <h1 className="text-2xl text-blue-200 font-bold font-serif">UserEcho</h1>
         </NavLink>
 
         {/* Desktop Menu */}
