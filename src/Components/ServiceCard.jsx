@@ -19,7 +19,7 @@ const ServiceCard = ({ service }) => {
         {/* Title & Badge */}
         <div className="flex justify-between items-center">
           <h2 className="text-xl font-bold text-gray-100">{title}</h2>
-          <span className="bg-green-500 text-white text-xs px-3 py-1 rounded-full">
+          <span className="bg-blue-500 text-white text-xs px-3 py-1 rounded-full">
             NEW
           </span>
         </div>

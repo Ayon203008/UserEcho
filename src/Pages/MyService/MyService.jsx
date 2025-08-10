@@ -14,7 +14,7 @@ const MyService = () => {
 
   return (
     <div>
-      <h1 className="text-4xl text-center my-2">My All Services</h1>
+      <h1 className="text-4xl text-center mt-10 font-serif font-bold text-blue-500 hover:text-green-700 my-2">My All Services</h1>
       <Suspense>
         {
           <MyServicesList

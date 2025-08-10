@@ -16,7 +16,7 @@ const CountUpUser = () => {
           <CountUp
             end={end}
             duration={5}
-            className="text-7xl font-extrabold text-green-400 drop-shadow-md"
+            className="text-7xl font-extrabold text-blue-500 drop-shadow-md"
           />
           <h2 className="mt-4 text-3xl font-semibold tracking-wide font-serif text-center">
             {label}
