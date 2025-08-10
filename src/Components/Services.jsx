@@ -6,11 +6,14 @@ const Services = ({servicesPromise}) => {
     const servics = use(servicesPromise)
 
     return (
+        <div>
+            <h1 className='text-6xl font-semibold text-center mb-20'>Our special Services</h1>
         <div className='grid grid-cols-3 gap-15 '>
             {
                 servics.map(service=><ServiceCard key={service._id} service={service}></ServiceCard>)
             }
         </div>
+            </div>
     );
 };
 

@@ -5,13 +5,18 @@ import Footer from "../Components/Footer";
 
 const MainLayOut = () => {
   return (
-    <div className="w-11/12 mx-auto flex flex-col min-h-screen">
+    <>
       <Navbar></Navbar>
+      <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300">
+
+    <div className="w-11/12 mx-auto flex flex-col min-h-screen ">
       <div className=" flex-grow">
         <Outlet></Outlet>
       </div>
-      <Footer></Footer>
     </div>
+      <Footer></Footer>
+      </div>
+    </>
   );
 };
 

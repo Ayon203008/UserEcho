@@ -5,40 +5,35 @@ import { MdVerified } from "react-icons/md";
 
 const About = () => {
   return (
-    <div className="flex flex-col lg:flex-row gap-10 mt-40 mb-40 px-6 py-12 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 shadow-xl rounded-3xl mx-5">
+    <div className="flex flex-col lg:flex-row gap-12 mt-40 mb-40 px-8 py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl shadow-2xl text-gray-300 max-w-7xl mx-auto">
       
       {/* Text Section */}
-      <div className="flex-1 flex flex-col justify-center">
-        <h1 className="text-4xl font-mono mb-5 bg-gray-400 text-white inline-block px-4 py-2 rounded-xl shadow-md">
+      <div className="flex-1 flex flex-col justify-center space-y-8">
+        <h1 className="text-4xl font-mono mb-2 bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 bg-clip-text text-transparent font-semibold select-none">
           What's in the app?
         </h1>
-        <h1 className="text-5xl lg:text-6xl font-extrabold mb-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
+        <h2 className="text-5xl lg:text-6xl font-extrabold leading-tight bg-gradient-to-r from-pink-400 via-red-500 to-yellow-400 bg-clip-text text-transparent drop-shadow-lg">
           Empower your voice with trusted reviews
-        </h1>
+        </h2>
 
-        <div className="space-y-4 text-xl text-gray-800">
-          <div className="flex items-center gap-3">
-            <MdVerified className="text-3xl text-green-700" />
-            <span>Verified service-based reviews</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <MdVerified className="text-3xl text-green-700" />
-            <span>Save time, build trust faster</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <MdVerified className="text-3xl text-green-700" />
-            <span>AI-powered sentiment analysis</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <MdVerified className="text-3xl text-green-700" />
-            <span>Easy-to-use feedback system</span>
-          </div>
+        <div className="space-y-5 text-lg md:text-xl">
+          {[
+            "Verified service-based reviews",
+            "Save time, build trust faster",
+            "AI-powered sentiment analysis",
+            "Easy-to-use feedback system",
+          ].map((item, idx) => (
+            <div key={idx} className="flex items-center gap-4">
+              <MdVerified className="text-green-400 text-4xl flex-shrink-0" />
+              <p className="font-medium">{item}</p>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Lottie Animation */}
       <div className="flex-1 flex justify-center items-center">
-        <div className="w-full max-w-md bg-white p-4 rounded-2xl shadow-lg">
+        <div className="w-full max-w-lg bg-gradient-to-tr from-gray-800 via-gray-700 to-gray-900 p-6 rounded-3xl shadow-xl">
           <Lottie animationData={aboutLottie} loop={true} />
         </div>
       </div>

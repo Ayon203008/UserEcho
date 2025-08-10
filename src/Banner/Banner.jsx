@@ -27,7 +27,7 @@ const Banner = () => {
           <div className="relative">
             <div>
               <img
-                src="https://i.ibb.co/1fWGxskv/anastase-maragos-Hyv-E5-Si-KMUs-unsplash.jpg"
+                src="https://i.ibb.co.com/j9nx3wPB/gym-min.jpg"
                 alt="Slide 1"
                 className="w-full h-[600px] object-cover rounded-xl"
               />
@@ -75,7 +75,7 @@ const Banner = () => {
           <div className="relative">
             <div>
               <img
-                src="https://i.ibb.co/0jxyRtNW/brad-starkey-e-P8h7-YVh-FHk-unsplash.jpg"
+                src="https://i.ibb.co.com/Z1GtBbXk/brad-starkey-e-P8h7-YVh-FHk-unsplash-min.jpg"
                 alt="Slide 3"
                 className="w-full h-[600px] object-cover rounded-xl"
               />

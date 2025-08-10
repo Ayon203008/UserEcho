@@ -9,30 +9,19 @@ const AddService = () => {
 
   const handleAddService = (e) => {
     e.preventDefault();
-    const from = e.target;
-    const email = from.email.value;
-    const image = from.image.value;
-    const title = from.title.value;
-    const price = from.price.value;
-    const category = from.category.value;
-    const name = from.name.value;
-    const date = from.date.value;
-    const website = from.website.value;
-    const description = from.description.value;
-    console.log(
-      email,
-      image,
-      title,
-      price,
-      category,
-      name,
-      date,
-      website,
-      description
-    );
+    const form = e.target;
+    const email = form.email.value;
+    const image = form.image.value;
+    const title = form.title.value;
+    const price = form.price.value;
+    const category = form.category.value;
+    const name = form.name.value;
+    const date = form.date.value;
+    const website = form.website.value;
+    const description = form.description.value;
 
     const addServices = {
-      User_email:email,
+      User_email: email,
       image,
       title,
       price,
@@ -50,96 +39,119 @@ const AddService = () => {
           Swal.fire({
             position: "top-end",
             icon: "success",
-            title: "Your services has been submited",
+            title: "Your service has been submitted",
             showConfirmButton: false,
             timer: 1500,
           });
+          form.reset();
         }
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong! Please try again.",
+        });
       });
   };
 
   return (
-    <div className="flex justify-center my-10">
+    <div className="flex justify-center my-10 px-4">
       <form
         onSubmit={handleAddService}
-        className="fieldset bg-base-200 border-base-300 rounded-box w-md border p-4"
+        className="w-full max-w-xl bg-gray-900 text-gray-200 rounded-3xl p-8 shadow-lg"
       >
-        <legend className="fieldset-legend text-4xl text-center font-serif">
-          {" "}
-          Add your Service
-        </legend>
+        <h2 className="text-3xl font-serif font-bold mb-8 text-center text-indigo-400">
+          Add Your Service
+        </h2>
 
-        <label className="label">Email</label>
+        <label className="block mb-2 font-semibold">Email</label>
         <input
           type="email"
           name="email"
-          defaultValue={user.email}
-          className="input w-full"
-          placeholder="Email"
+          defaultValue={user?.email || ""}
+          readOnly
+          className="w-full mb-6 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:outline-none"
         />
 
-        <label className="label">image Url</label>
+        <label className="block mb-2 font-semibold">Image URL</label>
         <input
           type="url"
           name="image"
-          className="input w-full"
-          placeholder="image"
+          placeholder="Image URL"
+          required
+          className="w-full mb-6 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:outline-none"
         />
 
-        <label className="label">Title</label>
+        <label className="block mb-2 font-semibold">Title</label>
         <input
           type="text"
           name="title"
-          className="input w-full"
-          placeholder="title"
+          placeholder="Service Title"
+          required
+          className="w-full mb-6 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:outline-none"
         />
 
-        <label className="label">Price</label>
+        <label className="block mb-2 font-semibold">Price</label>
         <input
-          type="text"
+          type="number"
           name="price"
-          className="input w-full"
-          placeholder="Price"
+          placeholder="Price in USD"
+          min="0"
+          required
+          className="w-full mb-6 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:outline-none"
         />
 
-        <label className="label">Category</label>
+        <label className="block mb-2 font-semibold">Category</label>
         <input
           type="text"
           name="category"
-          className="input w-full"
           placeholder="Category"
+          required
+          className="w-full mb-6 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:outline-none"
         />
 
-        <label className="label">Compnay Name</label>
+        <label className="block mb-2 font-semibold">Company Name</label>
         <input
           type="text"
           name="name"
-          className="input w-full"
-          placeholder="Compnay name"
+          placeholder="Company Name"
+          required
+          className="w-full mb-6 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:outline-none"
         />
 
-        <label className="label">Website Link</label>
+        <label className="block mb-2 font-semibold">Website Link</label>
         <input
           type="url"
           name="website"
-          className="input w-full"
-          placeholder="Link"
+          placeholder="Website URL"
+          className="w-full mb-6 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:outline-none"
         />
 
-        <label className="label">Date</label>
-        <input type="date" name="date" className="input w-full" />
+        <label className="block mb-2 font-semibold">Date</label>
+        <input
+          type="date"
+          name="date"
+          required
+          className="w-full mb-6 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:outline-none"
+        />
 
-        <label className="label">Description</label>
+        <label className="block mb-2 font-semibold">Description</label>
         <textarea
-          placeholder="Description"
           name="description"
-          className="textarea textarea-primary w-full"
+          placeholder="Write a brief description"
+          rows="5"
+          required
+          className="w-full mb-6 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:outline-none resize-none"
         ></textarea>
 
-        <button className="btn btn-neutral mt-4">Submit</button>
+        <button
+          type="submit"
+          className="w-full bg-indigo-600 hover:bg-indigo-700 transition-colors duration-300 text-white font-semibold py-3 rounded-lg"
+        >
+          Submit
+        </button>
       </form>
     </div>
   );

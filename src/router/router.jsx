@@ -13,6 +13,7 @@ import AllServices from "../Pages/AllServices/AllServices";
 import MyServiceUpdate from "../Pages/MyService/MyServiceUpdate";
 import MyReviewCradUpdate from "../Pages/MyReview/MyReviewCradUpdate";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import ContactUs from "../Contact Us/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
         Component: Login,
         path: "/login",
       },
+      {
+        Component:ContactUs,
+        path:'/contactus'
+      },
+
       {
         Component: Register,
         path: "/register",
