@@ -34,7 +34,7 @@ const Banner = () => {
             </div>
             <div className="absolute inset-0 top-1/2 left-20">
         <h1
-                className="text-6xl font-bold mb-3"
+                className="text-6xl font-bold mb-3 text-gray-500"
                 animate={{ color: ["#FF0080", "#FFD700", "#00FFFF", "#FF0080"] }}
                 transition={{
                   duration: 6,
@@ -44,7 +44,7 @@ const Banner = () => {
               >
                 Transform Your Body
               </h1>
-              <h1 className="text-3xl font-semibold text-white drop-shadow-lg">
+              <h1 className="text-3xl font-semibold text-white-500 drop-shadow-lg">
                 Transform Your Life.
               </h1>
             </div>

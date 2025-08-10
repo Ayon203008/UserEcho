@@ -25,7 +25,7 @@ const AllServiceCard = ({ allService }) => {
         {/* Button */}
         <NavLink
           to={`/services/${allService._id}`}
-          className="inline-block w-full text-center bg-green-600 hover:bg-green-700 text-white font-medium py-2 rounded-lg transition-colors duration-300"
+          className="inline-block w-full text-center bg-blue-600 hover:bg-blue-900 text-white font-medium py-2 rounded-lg transition-colors duration-300"
         >
           See More
         </NavLink>
